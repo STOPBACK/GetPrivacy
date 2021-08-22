@@ -8,8 +8,6 @@
 (Note: Windows is a [Closed Source](https://www.coredna.com/blogs/comparing-open-closed-source-software) OS. So, this guide gives you a privacy & security focused setup, as much as possible.)
 
 ## Contents
-<header>
-<nav>
 - [Download Windows ISO File](#download-windows-iso-file)
 - [Removing Unnecessary Things from ISO File](#removing-unnecessary-things-from-iso-file)
 - [Burning to USB](#burning-to-usb)
@@ -42,8 +40,6 @@
 - [Gaming Tweaks](#-gaming-tweaks)
 - [Issues](#issues)
 - [Contact](#contact)
-</nav>
-</header>
 
 ## Download Windows ISO File
 
