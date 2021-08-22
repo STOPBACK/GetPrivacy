@@ -8,6 +8,8 @@
 (Note: Windows is a [Closed Source](https://www.coredna.com/blogs/comparing-open-closed-source-software) OS. So, this guide gives you a privacy & security focused setup, as much as possible.)
 
 ## Contents
+<header>
+<nav>
 - [Download Windows ISO File](#download-windows-iso-file)
 - [Removing Unnecessary Things from ISO File](#removing-unnecessary-things-from-iso-file)
 - [Burning to USB](#burning-to-usb)
@@ -40,6 +42,8 @@
 - [Gaming Tweaks](#-gaming-tweaks)
 - [Issues](#issues)
 - [Contact](#contact)
+</nav>
+</header>
 
 ## Download Windows ISO File
 
@@ -52,7 +56,8 @@
 
 * Windows 10
   - [TechBench](https://tb.rg-adguard.net/public.php)  
-  - [Heidoc.net](https://heidoc.net/joomla/technology-science/microsoft/67-microsoft-windows-and-office-iso-download-tool)
+  - [Heidoc.net](https://heidoc.net/joomla/technology-science/microsoft/67-microsoft-windows-and-office-iso-download-tool)  
+  - [Tiny Win10](https://dl.malwarewatch.org/windows/mods/Tiny%2010.iso)
   - You can directly go to the [AME website](https://ameliorated.info/) and download the stripped-down Windows 10 ISO file and go to Step 5 or else continue to Step 3.
     - Windows 10 AME aims at delivering a stable, non-intrusive yet fully functional build of Windows 10 to anyone, who requires the Windows operating system natively.
 
