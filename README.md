@@ -1,5 +1,7 @@
 # Setup Windows Privacy Focused 👨‍💻🔐
-```Note: The Project is Currently Developing```
+```
+Note: The Project is Currently Developing
+```
 - A Complete Guide to setup Operating Systems with focus on Privacy and Security.
 
 - Most of the software's listed here are [FOSS](https://itsfoss.com/what-is-foss/) (Free and Open Source).
