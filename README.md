@@ -9,4 +9,4 @@ Note: The Project is Currently Developing
 (Note: Windows and iPhone is a [Closed Source](https://www.coredna.com/blogs/comparing-open-closed-source-software) Operating System. So, this guide will try to you a privacy & security focused setup as much as possible.)
 
 ## License
-The Project is licensed Under [Creative Commons Zero v1.0 Universal](/LICENSE)
+The Project is licensed Under Creative Commons Zero v1.0 Universal. Check [License](/LICENSE) file for more information.
