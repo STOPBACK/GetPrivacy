@@ -141,7 +141,7 @@ document.getElementById("adblocker").innerHTML = adblocker;
     }
 
 let report = 'Operating System,' + OSName + "\n" +
-             'Operating System Version,' + OSVersion + "\n" +
+             'Operating System Type,' + OSVersion + "\n" +
              'Architecture,' + arctec + "\n" +
              'User-Agent,' + '"' + useragent + '"' + "\n" +
              'Do Not Track,' + dnt + "\n" +
