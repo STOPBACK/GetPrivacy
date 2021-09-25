@@ -44,6 +44,7 @@ document.getElementById("percent").innerHTML = popup * 100 / total;
 newWin3.close();
 }
 }
+   // OS Detect
 var OSName = "Unknown";
 if (window.navigator.userAgent.indexOf("Windows NT 10.0")!= -1) OSName="Windows 10";
 if (window.navigator.userAgent.indexOf("Windows NT 6.3") != -1) OSName="Windows 8.1";
@@ -55,7 +56,49 @@ if (window.navigator.userAgent.indexOf("Windows NT 5.0") != -1) OSName="Windows 
 if (window.navigator.userAgent.indexOf("Mac")            != -1) OSName="Mac/iOS";
 if (window.navigator.userAgent.indexOf("X11")            != -1) OSName="UNIX";
 if (window.navigator.userAgent.indexOf("Linux")          != -1) OSName="Linux";
+var OSVersion = OSName;
+document.getElementById("OSVersion").innerHTML = OSVersion;
+
+   // OS Version Detector
+function getOS() {
+var userAgent = window.navigator.userAgent,
+    platform = window.navigator.platform,
+    macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+    windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+    iosPlatforms = ['iPhone', 'iPad', 'iPod'],
+    os = null;
+
+if (macosPlatforms.indexOf(platform) !== -1) {
+  os = 'Mac OS';
+} else if (iosPlatforms.indexOf(platform) !== -1) {
+  os = 'iOS';
+} else if (windowsPlatforms.indexOf(platform) !== -1) {
+  os = 'Windows';
+} else if (/Android/.test(userAgent)) {
+  os = 'Android';
+} else if (!os && /Linux/.test(platform)) {
+  os = 'Linux';
+}
+
+return os;
+}
+var OSName = getOS();
 document.getElementById("OSName").innerHTML = OSName;
+
+    // Architecture Detector
+if (navigator.userAgent.indexOf("WOW64") != -1 || navigator.userAgent.indexOf("Win64") != -1 ){
+  var arctec = "x64";
+  document.getElementById("arctec").innerHTML = arctec;
+} else {
+  var arctec = "x86";
+  document.getElementById("arctec").innerHTML = arctec;
+}
+
+     // User-Agent Detector
+var useragent = navigator.userAgent;
+document.getElementById("user-agent").innerHTML = useragent;
+
+   // Do Not Track Detection
     let dntActive = () => {
 let dnt_active = parseInt(
   navigator.msDoNotTrack ||
@@ -66,49 +109,24 @@ let dnt_active = parseInt(
 return (dnt_active === 1);
 }
 if (dntActive()) {
- document.getElementById("dnt").innerHTML = "Enabled";
+  var dnt = "Enable";
 } else {
- document.getElementById("dnt").innerHTML = "Disabled";
+  var dnt = "Disable";
 }
-document.getElementById("user-agent").innerHTML = navigator.userAgent;;
+document.getElementById("dnt").innerHTML = dnt;
 
-  if (navigator.userAgent.indexOf("WOW64") != -1 || navigator.userAgent.indexOf("Win64") != -1 ){
-     arctec = "x64";
-     document.getElementById("arctec").innerHTML = "x64";
-  } else {
-     arctec = "x86";
-     document.getElementById("arctec").innerHTML = "x86";
-  }
+ // Detect Adblocker
+var isAdBlockActive=true;
+var script = document.createElement('script');
+script.src = "js/testing/ads.js";
+document.head.appendChild(script)
+if (isAdBlockActive) {
+  var adblocker = "Enable"
+} else {
+  var adblocker = "Disable"
+}
+document.getElementById("adblocker").innerHTML = adblocker;
 
-      $.getJSON("https://api.ipify.org?format=json",
-                                        function(data) {
-          $("#ip").html(data.ip);
-      })
-
-      window.onload = function() {
-        setTimeout(function() {
-          if ( typeof(window.google_jobrunner) === "undefined" ) {
-            document.getElementById("adblocker").innerHTML = "Yes";
-          } else {
-            document.getElementById("adblocker").innerHTML = "No";
-          }
-        }, 1000);
-      };
-
-
-      document.onreadystatechange = function() {
-        if (document.readyState !== "complete") {
-            document.querySelector(
-              "body").style.visibility = "hidden";
-            document.querySelector(
-              "#loader").style.visibility = "visible";
-        } else {
-            document.querySelector(
-              "#loader").style.display = "none";
-            document.querySelector(
-              "body").style.visibility = "visible";
-        }
-    };
 
     // Download Report
   function reportdownload(){
@@ -122,7 +140,12 @@ document.getElementById("user-agent").innerHTML = navigator.userAgent;;
       document.body.removeChild(element);
     }
 
-let report = 'Operating System: ' + OSName + "\n" + 'Architecture: ' + arctec + "\n";
+let report = 'Operating System,' + OSName + "\n" +
+             'Operating System Version,' + OSVersion + "\n" +
+             'Architecture,' + arctec + "\n" +
+             'User-Agent,' + '"' + useragent + '"' + "\n" +
+             'Do Not Track,' + dnt + "\n" +
+             'Adblocker,' + adblocker;
 
-      download("report.log",report);
+      download("report.csv",report);
   }

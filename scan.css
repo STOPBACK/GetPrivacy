@@ -11441,5 +11441,6 @@ p.scan {
 }
 
 table.report {
-  width: 30%;
+  margin-bottom: 30px;
+  text-align: Left;
 }
