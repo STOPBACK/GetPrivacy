@@ -147,7 +147,7 @@ let report = 'Operating System,' + OSName + "\n" +
              'Architecture,' + arctec + "\n" +
              'User-Agent,' + '"' + useragent + '"' + "\n" +
              'Do Not Track,' + dnt + "\n" +
-             'Adblocker,' + adblocker;
+             'Adblocker,' + adblockeEnabled;
 
       download("report.csv",report);
   }
