@@ -118,7 +118,7 @@ document.getElementById("dnt").innerHTML = dnt;
  // Detect Adblocker
 var isAdBlockActive=true;
 var script = document.createElement('script');
-script.src = "js/testing/ads.js";
+script.src = "testing/ads.js";
 document.head.appendChild(script)
 if (isAdBlockActive) {
   var adblocker = "Enable"
