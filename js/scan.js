@@ -116,19 +116,14 @@ if (dntActive()) {
 document.getElementById("dnt").innerHTML = dnt;
 
  // Detect Adblocker
-let adBlockEnabled = Disable;
-const ad = document.createElement('div')
-ad.innerHTML = '&nbsp;'
-ad.className = 'adsbox'
-document.body.appendChild(ad)
-window.setTimeout(function() {
-  if (ad.offsetHeight === 0) {
-    adblockEnabled = Enable;
+var adblocker = "Disable";
+setTimeout(function(){
+  var x = document.getElementById("ads");
+  if (window.getComputedStyle(x).display === "none") {
+    var adblocker = "Enable";
   }
-  ad.remove()
-  document.getElementById("adblocker").innerHTML = adblockEnabled;
-  }
-}, 100)
+}, 500);
+document.getElementById("adblocker").innerHTML = adblocker;
 
     // Download Report
   function reportdownload(){
@@ -147,7 +142,7 @@ let report = 'Operating System,' + OSName + "\n" +
              'Architecture,' + arctec + "\n" +
              'User-Agent,' + '"' + useragent + '"' + "\n" +
              'Do Not Track,' + dnt + "\n" +
-             'Adblocker,' + adblockeEnabled;
+             'Adblocker,' + adblocker;
 
       download("report.csv",report);
   }
