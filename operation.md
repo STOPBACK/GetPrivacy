@@ -3,11 +3,11 @@
 Current Operation 1: **/check.html**
 
 - [x] Check User's Operating System
-- [ ] Detect User's Browser User Agent
+- [x] Detect User's Browser User Agent
 - [ ] Check User Using VPN or not
 - [ ] Check User Using Tor or not
 - [ ] Detect ISP name
-- [ ] Detect DNT (Do Not Track) Enabled or not
+- [x] Detect DNT (Do Not Track) Enabled or not
 
 
 Current Operation 2: None
