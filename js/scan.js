@@ -116,17 +116,19 @@ if (dntActive()) {
 document.getElementById("dnt").innerHTML = dnt;
 
  // Detect Adblocker
-var isAdBlockActive=true;
-var script = document.createElement('script');
-script.src = "testing/ads.js";
-document.head.appendChild(script)
-if (isAdBlockActive) {
-  var adblocker = "Enable"
-} else {
-  var adblocker = "Disable"
-}
-document.getElementById("adblocker").innerHTML = adblocker;
-
+let adBlockEnabled = Disable;
+const ad = document.createElement('div')
+ad.innerHTML = '&nbsp;'
+ad.className = 'adsbox'
+document.body.appendChild(ad)
+window.setTimeout(function() {
+  if (ad.offsetHeight === 0) {
+    adblockEnabled = Enable;
+  }
+  ad.remove()
+  document.getElementById("adblocker").innerHTML = adblockEnabled;
+  }
+}, 100)
 
     // Download Report
   function reportdownload(){
