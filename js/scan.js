@@ -117,12 +117,10 @@ document.getElementById("dnt").innerHTML = dnt;
 
  // Detect Adblocker
 var adblocker = "Disable";
-setTimeout(function(){
-  var x = document.getElementById("ads");
-  if (window.getComputedStyle(x).display === "none") {
-    var adblocker = "Enable";
-  }
-}, 500);
+var element = document.getElementById("ads");
+if (window.getComputedStyle(element).display === "none") {
+var adblocker = "Enable";
+}
 document.getElementById("adblocker").innerHTML = adblocker;
 
     // Download Report
