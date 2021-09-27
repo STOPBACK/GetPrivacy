@@ -58,7 +58,7 @@ window.addEventListener('DOMContentLoaded', event => {
             scbtn.style.display = "none";
             document.getElementById("scnbtn-text").innerHTML = "";
             var script = document.createElement('script');
-            script.src = "scan.js";
+            script.src = "js/scan.js";
             document.head.appendChild(script)
           }
         }
