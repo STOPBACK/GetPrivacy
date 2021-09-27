@@ -115,12 +115,11 @@ if (dntActive()) {
 }
 document.getElementById("dnt").innerHTML = dnt;
 
- // Detect Adblocker
+ // Detect Adblocker - Image Method
 var adblocker = "Disable";
 var element = document.getElementById("ads");
-if (window.getComputedStyle(element).display === "none") {
-var adblocker = "Enable";
-}
+if (window.getComputedStyle(element).display === "none") {var adblocker = "Enable";}
+if (window.getComputedStyle(element).display === "none!important") {var adblocker = "Enable";}
 document.getElementById("adblocker").innerHTML = adblocker;
 
     // Download Report
