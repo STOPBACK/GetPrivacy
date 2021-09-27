@@ -117,9 +117,15 @@ document.getElementById("dnt").innerHTML = dnt;
 
  // Detect Adblocker - Image Method
 var adblocker = "Disable";
+$(document).ready(function(){
+  if ($(element).is(":hidden");) {
+    var adblocker = "Enable";
+  }
+});
 var element = document.getElementById("ads");
 if (window.getComputedStyle(element).display === "none") {var adblocker = "Enable";}
 if (window.getComputedStyle(element).display === "none!important") {var adblocker = "Enable";}
+if (window.getComputedStyle(element).display === "none !important") {var adblocker = "Enable";} // 1DM filter
 document.getElementById("adblocker").innerHTML = adblocker;
 
     // Download Report
