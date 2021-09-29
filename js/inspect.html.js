@@ -49,9 +49,14 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
+var sec = document.getElementById("scan-result");
+var scbtn = document.getElementById("scan-button");
+
+window.onload = function() {
+   scbtn.style.display = "block";
+}
+
         function scan() {
-          var sec = document.getElementById("scan-result");
-          var scbtn = document.getElementById("scan-button");
           if (sec.style.display === "none") {
             sec.style.display = "block";
             sec.scrollIntoView();
