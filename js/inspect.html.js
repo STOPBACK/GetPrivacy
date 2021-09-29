@@ -53,7 +53,7 @@ var sec = document.getElementById("scan-result");
 var scbtn = document.getElementById("scan-button");
 
 window.onload = function() {
-   document.getElementById("scnbtn").innerHTML = "Scan My Network";
+   scbtn.innerHTML = "Scan My Network";
    scbtn.setAttribute("onclick", "scan();");
 }
 
