@@ -116,10 +116,10 @@ if (dntActive()) {
 document.getElementById("dnt").innerHTML = dnt;
 
  // Detect Adblocker - Image Method
-var adelement = document.getElementById("ads").offsetLeft;
 var adblocker = "Disable";
-if (adelement < 1){
-   var adblocker = "Enable";
+if($('#ads').css('display') == 'none')
+{
+var adblocker = "Enable";
 }
 document.getElementById("adblocker").innerHTML = adblocker;
 
