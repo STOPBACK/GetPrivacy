@@ -11290,6 +11290,7 @@ body {
   text-transform: uppercase;
   border: none;
   border-radius: 10rem;
+  display: none;
 }
 
 hr.divider {
