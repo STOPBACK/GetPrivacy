@@ -53,7 +53,7 @@ var sec = document.getElementById("scan-result");
 var scbtn = document.getElementById("scan-button");
 
 window.onload = function() {
-   scbtn.style.display = "block";
+   scbtn.style.display = "inline";
 }
 
         function scan() {
