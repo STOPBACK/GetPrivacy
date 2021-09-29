@@ -52,7 +52,7 @@ window.addEventListener('DOMContentLoaded', event => {
 var sec = document.getElementById("scan-result");
 var scbtn = document.getElementById("scan-button");
 
-window.onload = function() {
+if (document.readyState === 'complete') {
    scbtn.innerHTML = "Scan My Network";
    scbtn.setAttribute("onclick", "scan();");
 }
