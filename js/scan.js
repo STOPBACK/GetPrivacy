@@ -118,7 +118,7 @@ document.getElementById("dnt").innerHTML = dnt;
  // Detect Adblocker - Image Method
 var adelement = document.getElementById("ads").offsetLeft;
 var adblocker = "Disable";
-if (adelement <== "0"){
+if (adelement < 1){
    var adblocker = "Enable";
 }
 document.getElementById("adblocker").innerHTML = adblocker;
