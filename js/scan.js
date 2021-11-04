@@ -117,9 +117,12 @@ document.getElementById("dnt").innerHTML = dnt;
 
  // Detect Adblocker - Image Method
 var adblocker = "Disable";
-adelement = document.getElementById("ads").style.display;
-if (adelement == "none"){
- var adblocker = "Enable";
+var myImg = document.querySelector("#ads");
+var currWidth = myImg.clientWidth;
+var currHeight = myImg.clientHeight;
+var imgsize = "1";
+if (currWidth < imgsize || currHeight < imgsize){
+  var adblocker = "Enable";
 }
 document.getElementById("adblocker").innerHTML = adblocker;
 
