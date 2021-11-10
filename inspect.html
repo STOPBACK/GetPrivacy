@@ -17,6 +17,10 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="scan.css" rel="stylesheet" />
+        <!-- Helper Scripts-->
+        <script>
+            var ads = 0;
+        </script>
     </head>
     <body id="page-top">
 
@@ -88,8 +92,12 @@
                 <td><span id="dnt"></span></td>
                 </tr>
                 <tr>
-                <td>Adblocker:</td>
-                <td><span id="adblocker"></span></td>
+                <td>Adblocker (Image Method):</td>
+                <td><span id="adblocker1"></span></td>
+                </tr>
+                <tr>
+                <td>Adblocker (Script Method):</td>
+                <td><span id="adblocker2"></span></td>
                 </tr>
               </table>
               <br /><br /><br /><br />
@@ -138,6 +146,8 @@
         </footer>
         <!-- Bootstrap core JS-->
         <script src="js/external/bootstrap.bundle.min.js"></script>
+        <!-- Google Ads-->
+        <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" onload="ads=1"></script>
         <!-- Core theme JS-->
         <script src="js/inspect.html.js"></script>
     </body>
