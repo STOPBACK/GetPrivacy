@@ -108,8 +108,8 @@ document.getElementById("ProcessorCore").innerHTML = ProcessorCore + " Core(s)";
 
    // Detect Total Amount of RAM
 let memory = navigator.deviceMemory;
-var memory = memory + " GB";
-document.getElementById("memory").innerHTML = memory;
+var ram = memory + " GB";
+document.getElementById("memory").innerHTML = ram;
 
      // User-Agent Detector
 var useragent = navigator.userAgent;
@@ -159,7 +159,7 @@ let report = 'Operating System,' + OSName + "\n" +
              'Operating System Type,' + OSVersion + "\n" +
              'Architecture,' + arctec + "\n" +
              'Processor Core Count,' + ProcessorCore + "\n" +
-             'RAM,' + memory + "\n" +
+             'RAM,' + ram + "\n" +
              'User-Agent,' + '"' + useragent + '"' + "\n" +
              'Do Not Track,' + dnt + "\n" +
              'Adblocker,' + adblocker;
