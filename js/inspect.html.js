@@ -67,6 +67,6 @@ window.onload = function() {
                 var script = document.createElement('script');
                 script.src = "js/scan.js";
                 document.head.appendChild(script)
-            }, 1000);
+            }, 500);
           }
         }
