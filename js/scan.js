@@ -147,10 +147,10 @@ if (currWidth < imgsize || currHeight < imgsize){
 document.getElementById("adblocker1").innerHTML = adblocker1;
 
   // Detect Adblocker - Google Script Method
-if(ads !== "1"){
-  var adblocker2 = "Enable";
-} else {
+if(ads){
   var adblocker2 = "Disable";
+} else {
+  var adblocker2 = "Enable";
 }
 document.getElementById("adblocker2").innerHTML = adblocker2;
 
