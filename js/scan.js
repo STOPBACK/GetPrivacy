@@ -148,10 +148,11 @@ document.getElementById("adblocker1").innerHTML = adblocker1;
 
   // Detect Adblocker - Google Script Method
 if(ads !== "1"){
-  document.getElementById("adblocker2").innerHTML = "Enable";
+  var adblocker2 = "Enable";
 } else {
-  document.getElementById("adblocker2").innerHTML = "Disable";
+  var adblocker2 = "Disable";
 }
+document.getElementById("adblocker2").innerHTML = adblocker2;
 
     // Download Report
   function reportdownload(){
