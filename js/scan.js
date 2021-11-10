@@ -109,9 +109,6 @@ document.getElementById("ProcessorCore").innerHTML = ProcessorCore + " Core(s)";
    // Detect Total Amount of RAM
 let memory = navigator.deviceMemory;
 var memory = memory + " GB";
-if (memory == "undefined"){
-  var memory = "Undetectable";
-}
 document.getElementById("memory").innerHTML = memory;
 
      // User-Agent Detector
