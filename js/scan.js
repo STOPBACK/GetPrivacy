@@ -95,11 +95,11 @@ document.getElementById("arctec").innerHTML = arctec;
 
    // Processor Core Detection
 let ProcessorCore = navigator.hardwareConcurrency;
-document.getElementById("ProcessorCore").innerHTML = ProcessorCore;
+document.getElementById("ProcessorCore").innerHTML = ProcessorCore + " Core(s)";
 
    // Detect Total Amount of RAM
 let memory = navigator.deviceMemory;
-document.getElementById("memory").innerHTML = memory;
+document.getElementById("memory").innerHTML = memory + " GB";
 
      // User-Agent Detector
 var useragent = navigator.userAgent;
@@ -148,8 +148,8 @@ document.getElementById("adblocker").innerHTML = adblocker;
 let report = 'Operating System,' + OSName + "\n" +
              'Operating System Type,' + OSVersion + "\n" +
              'Architecture,' + arctec + "\n" +
-             'Processor Core Count,' + ProcessorCore + " Core(s)" + "\n" +
-             'RAM,' + memory + " GB" + "\n" +
+             'Processor Core Count,' + ProcessorCore + "\n" +
+             'RAM,' + memory + "\n" +
              'User-Agent,' + '"' + useragent + '"' + "\n" +
              'Do Not Track,' + dnt + "\n" +
              'Adblocker,' + adblocker;
