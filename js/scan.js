@@ -88,11 +88,18 @@ document.getElementById("OSName").innerHTML = OSName;
     // Architecture Detector
 if (navigator.userAgent.indexOf("WOW64") != -1 || navigator.userAgent.indexOf("Win64") != -1 ){
   var arctec = "x64";
-  document.getElementById("arctec").innerHTML = arctec;
 } else {
   var arctec = "x86";
-  document.getElementById("arctec").innerHTML = arctec;
 }
+document.getElementById("arctec").innerHTML = arctec;
+
+   // Processor Core Detection
+let ProcessorCore = navigator.hardwareConcurrency;
+document.getElementById("ProcessorCore").innerHTML = ProcessorCore;
+
+   // Detect Total Amount of RAM
+let memory = navigator.deviceMemory;
+document.getElementById("memory").innerHTML = memory;
 
      // User-Agent Detector
 var useragent = navigator.userAgent;
@@ -141,6 +148,8 @@ document.getElementById("adblocker").innerHTML = adblocker;
 let report = 'Operating System,' + OSName + "\n" +
              'Operating System Type,' + OSVersion + "\n" +
              'Architecture,' + arctec + "\n" +
+             'Processor Core Count,' + ProcessorCore + " Core(s)" + "\n" +
+             'RAM,' + memory + "GB" + "\n" +
              'User-Agent,' + '"' + useragent + '"' + "\n" +
              'Do Not Track,' + dnt + "\n" +
              'Adblocker,' + adblocker;
