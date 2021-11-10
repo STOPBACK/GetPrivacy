@@ -147,7 +147,7 @@ if (currWidth < imgsize || currHeight < imgsize){
 document.getElementById("adblocker1").innerHTML = adblocker1;
 
   // Detect Adblocker - Google Script Method
-if(ads == "1"){
+if(ads !== "1"){
   document.getElementById("adblocker2").innerHTML = "Enable";
 } else {
   document.getElementById("adblocker2").innerHTML = "Disable";
@@ -172,7 +172,8 @@ let report = 'Operating System,' + OSName + "\n" +
              'RAM,' + ram + "\n" +
              'User-Agent,' + '"' + useragent + '"' + "\n" +
              'Do Not Track,' + dnt + "\n" +
-             'Adblocker,' + adblocker1;
+             'Adblocker (Image Method),' + adblocker1 + "\n" +
+             'Adblocker (Script Method),' + adblocker2;
 
       download("report.csv",report);
   }
