@@ -66,7 +66,7 @@ if (window.navigator.userAgent.indexOf("Linux")          != -1) OSName="Linux";
 if (OSName == "Linux" && andos.indexOf("Android") !== "-1"){
   var OSName = andos;
 }
-var OSVersion = OSName;
+document.getElementById("OSName").innerHTML = OSName;
 
    // OS Version Detector
 function getOS() {
@@ -91,8 +91,8 @@ if (macosPlatforms.indexOf(platform) !== -1) {
 
 return os;
 }
-var OSName = getOS();
-document.getElementById("OSName").innerHTML = OSName;
+var OSVersion = getOS();
+document.getElementById("OSVersion").innerHTML = OSVersion;
 
     // Architecture Detector
 if (navigator.userAgent.indexOf("WOW64") != -1 || navigator.userAgent.indexOf("Win64") != -1 ){
