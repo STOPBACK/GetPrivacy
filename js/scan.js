@@ -45,6 +45,13 @@ newWin3.close();
 }
 }
    // OS Detect
+var useragent = navigator.userAgent;
+var andos = useragent.split("(");
+var andos = andos[1]
+var andos = andos.split(")");
+var andos = andos[0]
+var andos = andos.split(";");
+var andos = andos[1]
 var OSName = "Unknown";
 if (window.navigator.userAgent.indexOf("Windows NT 10.0")!= -1) OSName="Windows 10";
 if (window.navigator.userAgent.indexOf("Windows NT 6.3") != -1) OSName="Windows 8.1";
@@ -56,8 +63,10 @@ if (window.navigator.userAgent.indexOf("Windows NT 5.0") != -1) OSName="Windows 
 if (window.navigator.userAgent.indexOf("Mac")            != -1) OSName="Mac/iOS";
 if (window.navigator.userAgent.indexOf("X11")            != -1) OSName="UNIX";
 if (window.navigator.userAgent.indexOf("Linux")          != -1) OSName="Linux";
+if (OSName == "Linux" && andos.indexOf("Android") !== "-1"){
+  var OSName = andos;
+}
 var OSVersion = OSName;
-document.getElementById("OSVersion").innerHTML = OSVersion;
 
    // OS Version Detector
 function getOS() {
