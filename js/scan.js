@@ -94,7 +94,7 @@ return os;
 var OSVersion = getOS();
 document.getElementById("OSVersion").innerHTML = OSVersion;
 
-    // Architecture Detector
+   // Architecture Detector
 if (navigator.userAgent.indexOf("WOW64") != -1 || navigator.userAgent.indexOf("Win64") != -1 ){
   var arctec = "x64";
 } else {
@@ -114,7 +114,7 @@ if (ram.indexOf("undefined") !== "-1") {
 }
 document.getElementById("memory").innerHTML = ram;
 
-     // User-Agent Detector
+   // User-Agent Detector
 var useragent = navigator.userAgent;
 document.getElementById("user-agent").innerHTML = useragent;
 
@@ -136,15 +136,22 @@ if (dntActive()) {
 document.getElementById("dnt").innerHTML = dnt;
 
  // Detect Adblocker - Image Method
-var adblocker = "Disable";
+var adblocker1 = "Disable";
 var myImg = document.querySelector("#ads");
 var currWidth = myImg.clientWidth;
 var currHeight = myImg.clientHeight;
 var imgsize = "1";
 if (currWidth < imgsize || currHeight < imgsize){
-  var adblocker = "Enable";
+  var adblocker1 = "Enable";
 }
-document.getElementById("adblocker").innerHTML = adblocker;
+document.getElementById("adblocker1").innerHTML = adblocker1;
+
+  // Detect Adblocker - Google Script Method
+if(ads == "1"){
+  document.getElementById("adblocker2").innerHTML = "Enable";
+} else {
+  document.getElementById("adblocker2").innerHTML = "Disable";
+}
 
     // Download Report
   function reportdownload(){
@@ -165,7 +172,7 @@ let report = 'Operating System,' + OSName + "\n" +
              'RAM,' + ram + "\n" +
              'User-Agent,' + '"' + useragent + '"' + "\n" +
              'Do Not Track,' + dnt + "\n" +
-             'Adblocker,' + adblocker;
+             'Adblocker,' + adblocker1;
 
       download("report.csv",report);
   }
