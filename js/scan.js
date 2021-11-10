@@ -109,7 +109,7 @@ document.getElementById("ProcessorCore").innerHTML = ProcessorCore + " Core(s)";
    // Detect Total Amount of RAM
 let memory = navigator.deviceMemory;
 var ram = memory + " GB";
-if (memory == "undefined") {
+if (ram.indexOf("undefined") !== "-1") {
   var ram = "Failed to Detect";
 }
 document.getElementById("memory").innerHTML = ram;
