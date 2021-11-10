@@ -149,7 +149,7 @@ let report = 'Operating System,' + OSName + "\n" +
              'Operating System Type,' + OSVersion + "\n" +
              'Architecture,' + arctec + "\n" +
              'Processor Core Count,' + ProcessorCore + " Core(s)" + "\n" +
-             'RAM,' + memory + "GB" + "\n" +
+             'RAM,' + memory + " GB" + "\n" +
              'User-Agent,' + '"' + useragent + '"' + "\n" +
              'Do Not Track,' + dnt + "\n" +
              'Adblocker,' + adblocker;
