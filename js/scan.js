@@ -219,7 +219,7 @@ let report = 'Operating System,' + OSName + "\n" +
              'Do Not Track,' + dnt + "\n" +
              'Adblocker (Image Method),' + adblocker1 + "\n" +
              'Adblocker (Script Method),' + adblocker2 + "\n" +
-             'IPv4 Address,' + ip;
+             'IPv4 Address,' + ipv4;
 
       download("report.csv",report);
   }
