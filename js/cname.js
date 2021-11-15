@@ -6,7 +6,7 @@ txtFile.onreadystatechange = function()
    {
       if (txtFile.status === 200)
       {
-         document.write(txtFile.responseText);
+         var cname = txtFile.responseText;
       }
    }
 }
