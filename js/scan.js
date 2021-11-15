@@ -196,10 +196,10 @@ function getUserIP(onNewIP) { //  onNewIp - your listener function for new IPs
 getUserIP(function(ip){
 	document.getElementById("ip").innerHTML = ip;
 });
-var ip = document.getElementById("ip").innerHTML;
 
     // Download Report
   function reportdownload(){
+    var ip = document.getElementById("ip").innerHTML;
     function download(filename, text) {
       var element = document.createElement('a');
       element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
