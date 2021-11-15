@@ -1,1 +1,13 @@
-var txtFile=new XMLHttpRequest;txtFile.open("GET","../Cname",!0),txtFile.onreadystatechange=function(){if(4===txtFile.readyState&&200===txtFile.status)txtFile.responseText},txtFile.send(null);
+var txtFile = new XMLHttpRequest();
+txtFile.open("GET", "https://raw.githubusercontent.com/STOPBACK/GetPrivacy/main/CNAME", true);
+txtFile.onreadystatechange = function()
+{
+   if (txtFile.readyState === 4)
+   {
+      if (txtFile.status === 200)
+      {
+         document.write(txtFile.responseText);
+      }
+   }
+}
+txtFile.send(null)
