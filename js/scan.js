@@ -154,7 +154,7 @@ if(ads){
 }
 document.getElementById("adblocker2").innerHTML = adblocker2;
 
-     // IP Address Detection
+     // IPv4 Address Detection
 function getUserIP(onNewIP) { //  onNewIp - your listener function for new IPs
     //compatibility for firefox and chrome
     var myPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
@@ -194,12 +194,12 @@ function getUserIP(onNewIP) { //  onNewIp - your listener function for new IPs
 // Usage
 
 getUserIP(function(ip){
-	document.getElementById("ip").innerHTML = ip;
+	document.getElementById("ipv4").innerHTML = ip;
 });
 
     // Download Report
   function reportdownload(){
-    var ip = document.getElementById("ip").innerHTML;
+    var ipv4 = document.getElementById("ipv4").innerHTML;
     function download(filename, text) {
       var element = document.createElement('a');
       element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -219,7 +219,7 @@ let report = 'Operating System,' + OSName + "\n" +
              'Do Not Track,' + dnt + "\n" +
              'Adblocker (Image Method),' + adblocker1 + "\n" +
              'Adblocker (Script Method),' + adblocker2 + "\n" +
-             'IP Address,' + ip;
+             'IPv4 Address,' + ip;
 
       download("report.csv",report);
   }
