@@ -1,4 +1,3 @@
-include('js/cname.js');
 url = window.location.href;
 url_find = url.includes("https")
 url_find1 = url.includes(cname)
